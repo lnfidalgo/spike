@@ -4,7 +4,6 @@
 	"author": "Rodrigo Rodrigues - rodrigorodrigues1807@gmail.com",
 	"version": "1.0.0",
 	"license": "MIT",
-	"private": true,
 	"main": "index.js",
 	"bin": {
 		"farenx-boilerplate": "index.js"
