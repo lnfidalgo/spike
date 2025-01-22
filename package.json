@@ -1,12 +1,12 @@
 {
-	"name": "boilerplate-frontend",
+	"name": "farenx-boilerplate-front",
 	"description": "Boilerplate personalizado para projetos Next.js da empresa Farenx",
 	"author": "Rodrigo Rodrigues - rodrigorodrigues1807@gmail.com",
 	"version": "1.0.0",
 	"license": "MIT",
 	"main": "index.js",
 	"bin": {
-		"farenx-boilerplate": "index.js"
+		"farenx-boilerplate-front": "index.js"
 	},
 	"scripts": {
 		"dev": "next dev --turbopack",
