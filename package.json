@@ -1,27 +1,52 @@
 {
-  "name": "boilerplate",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.1.5"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.5",
-    "@eslint/eslintrc": "^3"
-  }
+	"name": "boilerplate",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"prepare": "husky",
+		"test": "vitest",
+		"test:run": "vitest run",
+		"test:ui": "vitest --ui",
+		"prettier:lint": "prettier . --write",
+		"test:coverage": "vitest run --coverage",
+		"test:preview": "vite preview --outDir html"
+	},
+	"lint-staged": {
+		"**/*": "prettier --write --ignore-unknown"
+	},
+	"dependencies": {
+		"@chakra-ui/react": "^3.4.0",
+		"@emotion/react": "^11.14.0",
+		"@testing-library/jest-dom": "^6.6.3",
+		"@testing-library/react": "^16.2.0",
+		"@vitejs/plugin-react": "^4.3.4",
+		"@vitest/coverage-v8": "^3.0.3",
+		"@vitest/ui": "^3.0.3",
+		"next": "15.1.5",
+		"next-intl": "^3.26.3",
+		"next-themes": "^0.4.4",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-icons": "^5.4.0",
+		"vite-tsconfig-paths": "^5.1.4",
+		"vitest": "^3.0.3"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "15.1.5",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.4.1",
+		"postcss": "^8",
+		"prettier": "3.4.2",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5"
+	}
 }
