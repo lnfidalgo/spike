@@ -1,13 +1,10 @@
 {
-	"name": "farenx-boilerplate-front",
+	"name": "boilerplate-frontend",
 	"description": "Boilerplate personalizado para projetos Next.js da empresa Farenx",
 	"author": "Rodrigo Rodrigues - rodrigorodrigues1807@gmail.com",
 	"version": "1.0.0",
 	"license": "MIT",
-	"main": "index.js",
-	"bin": {
-		"farenx-boilerplate-front": "index.js"
-	},
+	"private": true,
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
@@ -38,10 +35,8 @@
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"react-icons": "^5.4.0",
-		"shelljs": "^0.8.5",
 		"vite-tsconfig-paths": "^5.1.4",
-		"vitest": "^3.0.3",
-		"yargs": "^17.7.2"
+		"vitest": "^3.0.3"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
