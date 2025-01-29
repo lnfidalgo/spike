@@ -1,4 +1,9 @@
-import { createSystem, defineConfig } from '@chakra-ui/react';
+import {
+	createSystem,
+	defaultConfig,
+	defineConfig,
+	mergeConfigs,
+} from '@chakra-ui/react';
 
 const config = defineConfig({
 	globalCss: {
@@ -82,4 +87,6 @@ const config = defineConfig({
 	strictTokens: true,
 });
 
-export const system = createSystem(config);
+const styleMerge = mergeConfigs(defaultConfig, config);
+
+export const system = createSystem(styleMerge);
