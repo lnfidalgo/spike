@@ -1,12 +1,10 @@
-import Link from 'next/link';
+import Signup from '@/components/layout/Signup';
 
-export default function Home() {
+export default function SignUpPage() {
 	return (
 		<div className="min-h-screen bg-black text-white">
 			<main className="flex flex-col items-center py-16 px-8 sm:px-20 max-w-4xl mx-auto">
-				HOME PAGE
-				<Link href={'/signin'}>Signin</Link>
-				<Link href={'/signup'}>Signup</Link>
+				<Signup />
 			</main>
 		</div>
 	);
