@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import {
 	Box,
 	Button,
@@ -14,10 +13,10 @@ import {
 	Field,
 } from '@chakra-ui/react';
 import { toaster, Toaster } from '@/components/ui/toaster';
+import { signIn } from 'next-auth/react';
 
 export default function SignInPage() {
 	const router = useRouter();
-	const supabase = createClientComponentClient();
 	const {
 		register,
 		handleSubmit,
@@ -29,15 +28,15 @@ export default function SignInPage() {
 	async function onSubmit(data: { email: string; password: string }) {
 		setLoading(true);
 
-		const { error } = await supabase.auth.signInWithPassword({
+		const res = await signIn('credentials', {
 			email: data.email,
 			password: data.password,
+			redirect: false,
 		});
 
-		if (error) {
+		if (res?.error) {
 			toaster.create({
 				title: 'Deu ERRO',
-				description: error.message,
 				type: 'error',
 				duration: 3000,
 			});
@@ -52,6 +51,7 @@ export default function SignInPage() {
 			duration: 3000,
 		});
 		router.push('/dashboard');
+		setLoading(false);
 	}
 
 	return (
